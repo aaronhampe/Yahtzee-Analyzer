@@ -13,8 +13,14 @@ public class PatternAnalyzer {
         if (hasFourOfAKind(histogram)) {
             return Pattern.FOUROFAKIND;
         }
+        if (hasFullHouse(histogram)) {
+            return Pattern.FULLHOUSE;
+        }
         if (hasThreeOfAKind(histogram)) {
             return Pattern.THREEOFAKIND;
+        }
+        if (hasPair(histogram)) {
+            return Pattern.PAIR;
         }
         return Pattern.CHANCE;
     }
